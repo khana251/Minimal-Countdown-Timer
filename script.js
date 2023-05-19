@@ -3,7 +3,8 @@ const hoursEl = document.getElementById('hours');
 const minutesEl = document.getElementById('minutes');
 const secondsEl = document.getElementById('seconds');
 
-const newYears = '1 Jan 2024';
+
+const newYears = `1 Jan ${new Date().getFullYear() + 1}`;
 
 function countdown() {
     const newYearsDate = new Date(newYears);
@@ -15,15 +16,14 @@ function countdown() {
     const diffHours = Math.floor(diffTime / (1000 * 60 * 60)) % 24;
     const diffMinutes = Math.floor(diffTime / (1000 * 60)) % 60;
     const diffSeconds = Math.floor(diffTime / (1000)) % 60;
-    console.log(diffDays);
-    console.log(diffHours % 24);
-    console.log(diffMinutes % 60);
-    console.log(diffSeconds % 60);
     
     daysEl.innerHTML = formatTime(diffDays);
     hoursEl.innerHTML = formatTime(diffHours);
     minutesEl.innerHTML = formatTime(diffMinutes);
     secondsEl.innerHTML = formatTime(diffSeconds);
+
+    console.log()
+
 }
 
 function formatTime(time) {
