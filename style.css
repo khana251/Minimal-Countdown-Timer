@@ -24,6 +24,7 @@ h1 {
 .countdown-container {
     margin-top: 10rem;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .big-text {
