@@ -22,8 +22,6 @@ function countdown() {
     minutesEl.innerHTML = formatTime(diffMinutes);
     secondsEl.innerHTML = formatTime(diffSeconds);
 
-    console.log()
-
 }
 
 function formatTime(time) {
